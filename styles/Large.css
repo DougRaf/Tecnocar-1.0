@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.principal{ position:relative;
+            width:1350px;
+            margin:0 auto;
+			height:500px;
+			background-color: #00F;	
+	      }
