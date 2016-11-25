@@ -1,128 +1,95 @@
 /* CSS Document */
 .item1{
-	height:50px; 
-    background-color:red; margin-top:50px;
- border-bottom: solid;
-       
-	
+	   height:50px; 
+       background-color:red; margin-top:20px;
+       border-bottom: solid;
+      }
 
-}
+.item2{height:50px;}
 
-.item2{ height:50px;
+.item3{padding-bottom: 200px; padding-right: 300px;}
 
+.item4{background-color: #66ccff; color: #000;}
 
-}
+.item5{background-color: #633;}
 
-.item3{
- 
-  
-  padding-bottom: 200px;
-    padding-right: 300px;
- }
-
-.item4{
-	background-color: #66ccff;
-	color: #000;
-  }
-
-.item5{
-  background-color: #633;
-    
-  }
-
-.item6{ padding-left:400px;
-	padding-bottom: 10px;
-	font-size: 20px;
-	color: #06F;
-    text-decoration: underline;
-}
+.item6{ 
+       padding-left:400px;
+	   padding-bottom: 10px;
+	   font-size: 20px;
+	   color: #06F;
+       text-decoration: underline;
+      }
 
 .item7{
-
-  width: 200px;
-  height: 200px;
-  padding-right: 400px;
-  float:right;
-   
-  
- 
-}
+       width: 200px;
+       height: 200px;
+       padding-right: 400px;
+       float:right;
+      }
 
 .item9{
-  
-  width: 500px;
-  height: 200px;
-  margin-left:200px;
-  float: left;
-  
-  
-  
-}
+       width: 500px;
+       height: 200px;
+       margin-left:200px;
+       float: left;
+      }
 
-
-.item8{
- 
-  background-color: #F00;
-  }
+.item8{background-color: #F00;}
 
 .img1{
-  
-  width: 300px;
-  height: 200px;
- 
-  padding-left: 0px;
-  margin-left: 80px;
-  float:left;
-  
-}
+      width: 300px;
+      height: 200px;
+      padding-left: 0px;
+      margin-left: 80px;
+      float:left;
+     }
 
 .img2{
-    width: 200px;
-  height: 100px;
-  
-  margin-left: 100px;
-  float: left; 
-  margin-top:50px; 
-  
-    
-}
+      width: 200px;
+      height: 100px;
+      margin-left: 100px;
+      float: left; 
+      margin-top:50px;   
+     }
 
 .img3{
-  
-  width: 80px;
-  height: 80px;
- 
-  margin-left: 90px;
-  float: left; 
-  
-}
+      width: 80px;
+      height: 80px;
+      margin-left: 90px;
+      float: left; 
+     }
 
 .logo{
-	width: 242px;
-	height: 125px;
-	margin-left: 100px;
-	float: none;
-	padding-top: 5px;
-	position: absolute;}
+	  width: 242px;
+	  height: 125px;
+	  margin-left: 100px;
+	  float: none;
+	  padding-top: 5px;
+      position: absolute;
+     }
 
-.linha{ background-color: red; padding-bottom:20px;}
+.linha{background-color: red; padding-bottom:20px;}
 
-.pesquisa{margin-left:325px;}
+.pesquisa{margin-left:370px;}
 
 .rede{
       margin-left: 900px; 
       padding-top:5px;
 	  position:absolute;	
-	}
+	 }
 	
 .Siga{
-	color: #FFF;
-	font-weight: bold;
-	font-size:15px;}
+      color: #FFF;
+	  font-weight: bold;
+      font-size:15px;
+     }
 	
- .letreiro {margin-right: 0px;
-            padding-top:10px;
-            font-size:18px;}
+.letreiro{
+          margin-right: 0px;
+          padding-top:10px;
+          font-size:18px;
+         }
 
 .botao {margin-left: 250px;}
 
@@ -132,25 +99,30 @@
 
 .conteudo{text-justify:auto;}
 
-.footer{background-color:#F00;
-    margin-top:200px;
-    color:#FFF;
-    text-align:center;}
+.footer{
+        background-color:#F00;
+        margin-top:200px;
+        color:#FFF;
+        text-align:center;
+       }
 
-.total{width: 100%;
+.total{
+       width: 100%;
        max-width: 1200px;
-       margin: 0 auto;}
+       margin: 0 auto;
+       margin-bottom: 50px;
+      }
 
-.foto1{margin-left: 55px;
-    margin-top: 50px;}
+.foto1{margin-left: 55px; margin-top: 50px;}
 
-.equipe{ background-color:#66ccff;
-    height: 30px;
-    width: 1200px;
-text-align: center;
-    font-size: 20px;
-    color: black;
-    }
-	.teste{ width: 33.3333%;
-	 float:left;}
+.equipe{
+       background-color:#66ccff;
+       height: 30px;
+       width: 1200px; 
+       text-align: center;
+       font-size: 20px;
+       color: black;
+       }
+
+.teste{width: 33.3333%; float:left;}
 	
