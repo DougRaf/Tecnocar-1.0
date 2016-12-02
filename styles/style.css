@@ -110,9 +110,11 @@
 .pesquisa{margin-left:325px;}
 
 .rede{
-      margin-left: 900px; 
-      padding-top:5px;
-	  position:absolute;	
+	margin-left: 900px;
+	padding-top: 5px;
+	position: absolute;
+	width: 343px;
+	height: 47px;
 	}
 	
 .Siga{
@@ -133,13 +135,20 @@
 .conteudo{text-justify:auto;}
 
 .footer{background-color:#F00;
-    margin-top:200px;
+        margin-top:200;
     color:#FFF;
     text-align:center;}
 
+.rodape{background-color:#F00;
+        margin-top:2000;
+        color:#FFF;
+        text-align:center;}
+
+
+
 .total{width: 100%;
-       max-width: 1200px;
-       margin: 0 auto;}
+    max-width: 1200px;
+    margin: 0 auto;}
 
 .foto1{margin-left: 55px;
     margin-top: 50px;}
@@ -147,10 +156,57 @@
 .equipe{ background-color:#66ccff;
     height: 30px;
     width: 1200px;
-text-align: center;
+    text-align: center;
     font-size: 20px;
     color: black;
     }
-	.teste{ width: 33.3333%;
+
+.teste{ width: 33.3333%;
 	 float:left;}
 	
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+.C{margin-left: 100px;}
+
+/* 
+
+for zoom animation 
+uncomment this part if you haven't added this code anywhere else
+
+*/
+/*
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+*/
