@@ -12,7 +12,8 @@
 /* CSS Document */
 .item1{
 	height:50px; 
-    background-color:red; margin-top:25px;
+    background-color:red; 
+    margin-top:10px;
     border-bottom: solid;
     }
 

@@ -1,8 +1,9 @@
 /* CSS Document */
 .item1{
 	height:50px; 
-    background-color:red; margin-top:50px;
- border-bottom: solid;
+    background-color:red; 
+    margin-top:10px;
+    border-bottom: solid;
        
 	
 
@@ -179,6 +180,13 @@
 }
 
 .C{margin-left: 100px;}
+
+.f{
+   background-color:#F00;
+   color:#FFF;
+   text-align:center;
+  }
+
 
 /* 
 
