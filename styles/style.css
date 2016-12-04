@@ -127,7 +127,7 @@
             padding-top:10px;
             font-size:18px;}
 
-.botao {margin-left: 250px;}
+.botao {margin-left: 160px;}
 
 .texto {color:#FFF; font-size:20px; margin-left:210px;}
 
@@ -135,10 +135,12 @@
 
 .conteudo{text-justify:auto;}
 
-.footer{background-color:#F00;
-        margin-top:200;
-    color:#FFF;
-    text-align:center;}
+.footer{
+	background-color: #F00;
+	margin-top: 200px;
+	color: #FFF;
+	text-align: center;
+}
 
 .rodape{background-color:#F00;
         margin-top:2000;
@@ -187,7 +189,35 @@
    text-align:center;
   }
 
+.nome{
+    width: 600px;
+    height: 50;
+    border-right: solid;
+    border-left-color: black;
+    padding-right: 30px;
+    padding-left: 10px;
+    float: left;
+}
 
+.form{padding-top: 30px;}
+
+.direita{
+    float: right;
+    margin-bottom: 80px;
+}
+
+.footerf{
+    background-color: #F00;
+	margin-top: 400px;
+	color: #FFF;
+	text-align: center;}
+
+.position{
+    float: right;
+    padding-left: 20px;
+}
+
+h1{text-align: center;}
 /* 
 
 for zoom animation 
