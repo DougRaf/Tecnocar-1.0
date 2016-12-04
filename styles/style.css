@@ -218,6 +218,21 @@
 }
 
 h1{text-align: center;}
+
+
+.black{color: red; }
+
+
+
+::-webkit-input-placeholder  { color: red;}
+input:-moz-placeholder { color:red;}
+textarea:-moz-placeholder { color:red;}
+
+
+
+
+
+
 /* 
 
 for zoom animation 
