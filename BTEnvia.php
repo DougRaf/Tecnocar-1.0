@@ -40,10 +40,12 @@ if (isset($_POST['BTEnvia'])){
 	//Enviando o email
 	//====================================================
 	if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){
-		echo  "<script>alert('Email enviado com Sucesso!);</script>"; 
+		echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
+        echo "javascript:window.location='faleconosco.html';</script>"; 
 	}
   	else{
-		echo  "<script>alert('Email com Problema!);</script>";
+		echo "<script type='javascript'>alert('Problema ao enviar!');";
+        echo "javascript:window.location='faleconosco.html';</script>";
 	}
 	//====================================================
 }	
