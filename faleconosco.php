@@ -17,7 +17,7 @@ if (isset($_POST['BTEnvia'])){
  
 	//REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
  	//====================================================
-	$email_remetente = "douglas@dgssistemas.net"; // deve ser um email do dominio
+	$email_remetente = "esquinel_dr@hotmail.com"; // deve ser um email do dominio
 	//====================================================
  
  
@@ -55,11 +55,11 @@ if (isset($_POST['BTEnvia'])){
 	//====================================================
 	if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){
 		echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
-        echo "javascript:window.location='faleconosco.html';</script>"; 
+        echo "javascript:window.location='index.html';</script>"; 
 	}
   	else{
 		echo "<script type='javascript'>alert('Problema ao enviar!');";
-        echo "javascript:window.location='faleconosco.html';</script>";
+        echo "javascript:window.location='index.html';</script>";
 	}
 	//====================================================
 }	
@@ -105,9 +105,8 @@ if (isset($_POST['BTEnvia'])){
 <div class="form">
     <br>
       <div class="nome">         
-        <form class="form-horizontal">
-            <form action="<? $PHP_SELF; ?>" method="POST">
-          <div class="form-group">
+        <form class="form-horizontal" action="<? $PHP_SELF; ?>" method="post">
+             <div class="form-group">
            <div class="col-sm-10">
                <input type="nome" class="form-control" name="nome" placeholder="DIGITE AQUI SEU NOME">
            </div>
@@ -127,10 +126,9 @@ if (isset($_POST['BTEnvia'])){
                <textarea name="mensagem" rows="3" class="form-control" placeholder="ESCREVA AQUI SUA MENSAGEM" ></textarea>
              </div>
             </div>
-               <a href="BTEnvia.php" type="button" class="btn btn-primary btn-lg btn-block">ENVIAR</a>
+               <input type="button" name="BTEnvia" class="btn btn-primary btn-lg btn-block" value="Enviar">
         </form> 
-            </form>
-          
+              
       </div>
   <div class="direita"><h2>Estamos Localizados</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.209706365262!2d-49.91561368458929!3d-22.232120819734703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfda75a1da08d5%3A0x9756848812b09b8b!2sR.+Aldo+Roteli%2C+82+-+Jardim+Esplanada%2C+Mar%C3%ADlia+-+SP%2C+17521-390!5e0!3m2!1spt-BR!2sbr!4v1478290270491" width="300" height="200" frameborder="0" style="border:0" allowfullscreen>
