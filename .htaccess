@@ -1,14 +1,12 @@
-
 RewriteEngine On
 ErrorDocument 404 /erro_404.html
 
 
---------------------------------------------------
 
 
-php_flag authmail.debug ON
+php_flag authmail.debug off
 php_value authmail.port 587
 php_value authmail.address esquinel_dr@hotmail.com
 php_value authmail.smtp_account outlook.com
 php_value authmail.smtp smtp-mail.outlook.com
-php_value authmail.password ‘motoka’
+php_value authmail.password 'motoka'

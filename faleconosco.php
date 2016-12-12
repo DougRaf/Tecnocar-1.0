@@ -11,60 +11,7 @@
 <body class="total">     
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script> 
-    
-    <?php
-if (isset($_POST['BTEnvia'])){
- 
-	//REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
- 	//====================================================
-	$email_remetente = "esquinel_dr@hotmail.com"; // deve ser um email do dominio
-	//====================================================
- 
- 
-	//Configurações do email, ajustar conforme necessidade
-	//====================================================
-	$email_destinatario = "esquinel_dr@hotmail.com"; // qualquer email pode receber os dados
-	$email_reply = "$email";
-	$email_assunto = "Contato Website";
-	//====================================================
- 
- 
-	//Variaveis de POST, Alterar somente se necessário
-	//====================================================
-	$nome = $_POST['nome'];
-	$email = $_POST['email'];
-	$telefone = $_POST['telefone'];
- 	$mensagem = $_POST['mensagem'];
-	//====================================================
- 
-	//Monta o Corpo da Mensagem
-	//====================================================
-	$email_conteudo = "Nome = $nome \n"; 
-	$email_conteudo .= "Email = $email \n"; 
-	$email_conteudo .=  "Telefone = $telefone \n";
-	$email_conteudo .=  "Mensagem = $mensagem \n";
- 	//====================================================
- 
-	//Seta os Headers (Alerar somente caso necessario)
-	//====================================================
-	$email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Subject: $email_assunto","Return-Path:  $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
-	//====================================================
- 
- 
-	//Enviando o email
-	//====================================================
-	if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){
-		echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
-        echo "javascript:window.location='index.html';</script>"; 
-	}
-  	else{
-		echo "<script type='javascript'>alert('Problema ao enviar!');";
-        echo "javascript:window.location='index.html';</script>";
-	}
-	//====================================================
-}	
-?>  
-            <!-- Inicio da barra de navegação --> 
+             <!-- Inicio da barra de navegação --> 
          <div class="item1">
            <div class="logo"><img src="imagens/logo.png" width="188" height="125"></div>
          <div class="rede">
@@ -101,32 +48,66 @@ if (isset($_POST['BTEnvia'])){
     </div>
  </div>   
                <!-- inicio do formulario de contato -->
+    
+<script type="text/javascript" src="bootstrap/js/jquery.validate.js"></script>
+<script type="text/javascript" src="bootstrap/js/jquery.maskedinput.js"></script>	
+<script type="text/javascript" src="bootstrap/js/jquery.form.js"></script>	
+    
+    
+    <script>
+	$(document).ready(function() { 
+		$('#telefone').mask('(99) 9999-9999');
+		$.validator.messages.required = "Campo Obrigatório!";
+		$.validator.messages.email = "Email Inválido!";
+		
+		$("#frmManut").validate({
+			invalidHandler:function(){
+				$('#loading_contato').hide();
+			},
+			submitHandler: function(form) {
+					$('#loading_contato').show();	
+					$(form).ajaxSubmit(function(retorno){	
+						$('#loading_contato').hide();	
+						if (retorno!=true){
+							alert(retorno);
+						} else{
+							$('#nome').val('');
+ 							$('#email').val('');
+ 							$('#telefone').val('');
+							$('#obs').val('');
+							alert('Formulário enviado com Sucesso!');
+						}
+					});
+			}
+		});		
+	});	
+</script>      
     <h1>Entre em contato conosco</h1>
 <div class="form">
     <br>
       <div class="nome">         
-        <form class="form-horizontal" action="<? $PHP_SELF; ?>" method="post">
+        <form class="form-horizontal" id="frmManut" action="send.php" method="post">
              <div class="form-group">
            <div class="col-sm-10">
-               <input type="nome" class="form-control" name="nome" placeholder="DIGITE AQUI SEU NOME">
+               <input type="nome" class="form-control input required"  name="nome" placeholder="DIGITE AQUI SEU NOME">
            </div>
           </div> 
           <div class="form-group">
            <div class="col-sm-10">
-             <input type="email" class="form-control" name="email"  placeholder="DIGITE AQUI SEU E-MAIL">
+             <input type="email" class="form-control input required email" name="email"  placeholder="DIGITE AQUI SEU E-MAIL">
            </div>
           </div> 
           <div class="form-group">
            <div class="col-sm-10">
-              <input type="telefone" class="form-control" name="telefone" placeholder="DIGITE AQUI SEU TELEFONE" >
+              <input type="telefone" class="form-control input required" name="telefone" placeholder="DIGITE AQUI SEU TELEFONE" >
            </div>
           </div> 
             <div class="form-group">
              <div class="col-sm-10">
-               <textarea name="mensagem" rows="3" class="form-control" placeholder="ESCREVA AQUI SUA MENSAGEM" ></textarea>
+               <textarea name="obs" rows="3" class="form-control text required" placeholder="ESCREVA AQUI SUA MENSAGEM" ></textarea>
              </div>
             </div>
-               <input type="button" name="BTEnvia" class="btn btn-primary btn-lg btn-block" value="Enviar">
+               <input type="submit" name="Submit"  class="btn btn-primary btn-lg btn-block" value="ENVIAR" >
         </form> 
               
       </div>
