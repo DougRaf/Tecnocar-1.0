@@ -4,6 +4,10 @@
    $date = date("d/m/Y h:i");
    $nome = $_POST["nome"];
    $email = $_POST["email"];
+   $telefone = $_POST["telefone"];
+   $textodamensagem = $_POST["obs"];
+   
+//faz a configuração de redirecionamento
    $nome_do_site="Tecnocar_Empilhadeira";
    $email_para_onde_vai_a_mensagem = "esquinel_dr@hotmail.com";
    $nome_de_quem_recebe_a_mensagem = "Website_Tecnocar";
