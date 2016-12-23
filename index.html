@@ -11,6 +11,108 @@
 <body class="total">     
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>   
+<SCRIPT LANGUAGE="JavaScript">
+    <!-- Hide Script from Old Browsers
+/* 
+
+  Java Search Engine
+  (c)1997 Adam ALLEN.
+  Version 2.0
+    You may use this search engine on your page, but keep this 
+    notice intact, and at the bottom of leave the Copyright notice at
+    the bottom of this page.
+    This scripts is my property, so please honnour my requests,
+    If you do so, you may freely copy, distribute, give this scripts
+    But it will FOREVER REMAIN MY PROPERTY.
+  This is the first Java Script that I have wrote, and am proud of it,
+  I feel pleased that I can contribute back to the bank of JavaScripts
+  that I have used on my page from other people, AN EYE FOR AN EYE!
+*/
+
+  // Obviously the more enteries you have the more time it will take to
+  // load the document, but the seek time reamins very quick, I would
+  // say with about 500 entries you would be quicker than YAHOO!
+  // at least with this there are no CGI Scripts to load, once the main
+  // page is in that's it!!!!
+  // Define Database Options
+    Keyword = new Object();
+    Descrip = new Object();
+    Address = new Object();
+
+// Keyword[0] = n  (where n is the number of keywords which can be searched
+Keyword[0] = 6
+
+// Each entry is split into
+// Keyword[n] = text (where text is the keyword of which the entry is to
+// be searched by  (type Keywords in lowercase)
+// Descrip[n] = text (where text is the description associated to this entry
+// Address[n] = text (where text is the URL associated to the entry
+//  n is the entry number.
+
+Keyword[1] = "empilhadeira"
+Descrip[1] = "JavaScript World is the best JavaScript site on the Net."
+Address[1] = "http://www.tecnocarempilhadeiras.com.br"
+
+Keyword[2] = "yahoo"
+Descrip[2] = "Search the BEST engine on the internet."
+Address[2] = "http://www.yahoo.com"
+
+Keyword[3] = "world"
+Descrip[3] = "JavaScript World is the best JavaScript site on the Net."
+Address[3] = "http://www.mydesktop.com/javascript/"
+
+Keyword[4] = "free"
+Descrip[4] = "Free webpages at Geocities."
+Address[4] = "http://www.geocities.com"
+
+Keyword[5] = "free"
+Descrip[5] = "Free webpages at Tripod"
+Address[5] = "http://www.tripod.com"
+
+Keyword[6] = "free"
+Descrip[6] = "Free JavaScript at JavaScript World"
+Address[6] = "http://www.mydesktop.com/javascript/"
+    function checkDatabase() {
+
+      var Found = false
+      var Item = document.forms[0].searchfor.value.toLowerCase();
+
+stats='toolbar=no,location=no,directories=no,status=no,menubar=no,' 
+stats += 'scrollbars=yes,resizable=yes' 
+MsgBox = window.open ("","msgWindow",stats) 
+MsgBox.document.write("<head><title>Close this window to return to Adam's HomePage</title></head>");
+MsgBox.document.write ("<BODY BACKGROUND=back.jpg BGCOLOR=#C0C0C0 TEXT=#000000 LINK=#000080 VLINK=#800040 ALINK=#FF0000><H2><CENTER>Search Results</CENTER></H2>") 
+MsgBox.document.write ("<H3>For the keyword:  "+Item+"<HR>");
+        for (var i=1; i <= Keyword[0]; i++) {
+    if(Item == Keyword[i]) {
+    Found = true;
+   MsgBox.document.write ("<H4>"+Descrip[i]+"<BR><A HREF="+Address[i]+">Click Here To View</A></H4>") 
+
+        }
+      }
+      if(!Found)
+MsgBox.document.write ("<H4>Nothing Found</H4>") 
+// Leave the line below intact if you want to legally use this script
+MsgBox.document.write ("<H6>This script was created by Adam ALLEN ©1997 All Rights Reserved<BR><A HREF=http://www.geocities.com/CollegePark/5910>http://www.geocities.com/CollegePark/5910</A></H6>")
+// There must be my notice above if you are to use this script legally.
+// It took many hours work, fairs is fair, I just want that little line in
+// and you get a fully working Search ENGINE, for FREE, on your site
+// In Java Scripts aswell, and not crap JAVA!
+// Also a copyright notice MUST appear with the form.
+MsgBox.document.write ("<FORM><CENTER>") 
+MsgBox.document.write ("<INPUT type='button' value='Close' onClick = 'self.close()'>") 
+MsgBox.document.write ("</CENTER></FORM>")     }
+    //    -->
+</SCRIPT>
+
+
+
+
+
+
+
+
+
             <!-- Inicio da barra de navegação --> 
          <div class="item1">
            <div class="logo"><img src="imagens/logo.png" width="188" height="125"></div>
@@ -22,9 +124,9 @@
         <div class="pesquisa">
       <form class="navbar-form navbar-left" role="search">
     <div class="input-group">
-   <input type="text" class="form-control" placeholder="Encontre em nosso site....." size="50px">
+   <input type="text" class="form-control" name="searchfor" placeholder="Encontre em nosso site....." size="50px">
   <div class="input-group-btn">
- <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search black" aria-hidden="true"></span></button>
+ <button type="submit" class="btn btn-primary" onClick="checkDatabase()" ><span class="glyphicon glyphicon-search black" aria-hidden="true"></span></button>
   </div>
     </div> 
      </form>
@@ -47,7 +149,7 @@
        <a href="index.html" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>HOME</a>
        <a href="servicos.html" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>SERVIÇOS</a>
        <a href="vendasaluguel.html" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>VENDAS/ALUGUEL</a>
-       <a href="faleconosco.html" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span>FALE CONOSCO</a>
+       <a href="faleconosco.php" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span>FALE CONOSCO</a>
        <a href="orcamento.html" type="button" class="btn btn-link btn-lg" ><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>ORÇAMENTOS</a>
     </div>
  </div>
@@ -82,7 +184,7 @@
        <div class="conteudo"><ol>Ser conhecido nacionalmente como empresa modelo em seu ramo de atuação, pela sua competência,
                              confiabilidade, ética e principalmente pelos preços, prazos e qualidade dos serviços prestados.</ol>
        </div>
-     </div> 
+     </div>  
     <br/>
             <!-- Final do Website -->
            <div class="footer">Desenvolvido por DGS_SISTEMAS® 2014-2016</div>

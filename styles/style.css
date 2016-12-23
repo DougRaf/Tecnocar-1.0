@@ -54,7 +54,7 @@
   width: 500px;
   height: 200px;
   margin-left:200px;
-  float: left;
+  float: none;
   
   
   
@@ -137,7 +137,7 @@
 
 .footer{
 	background-color: #F00;
-	margin-top: 200px;
+	margin-top: 20px;
 	color: #FFF;
 	text-align: center;
 }
@@ -222,7 +222,7 @@ h1{text-align: center;}
 
 .black{color: red; }
 
-
+.center{align-content: center;}
 
 ::-webkit-input-placeholder  { color: red;}
 input:-moz-placeholder { color:red;}
